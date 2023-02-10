@@ -10,6 +10,5 @@ def home(request):
 
 
 def recipe(request, id):
-    return render(request, 'recipes/pages/recipe-view.html', context={
-        'name': 'José Augusto',
-    })
+    context = {'recipe': [make_recipe()]}
+    return render(request, 'recipes/pages/recipe-view.html', context=context)
